@@ -1,0 +1,4 @@
+<app-time-picker (selectedTimeChange)="updateSelectedTime($event)"></app-time-picker>
+<app-date-picker (selectedDateChange)="updateSelectedDate($event)"></app-date-picker>
+<p>Selected Date: {{ selectedDate ? selectedDate.format('YYYY-MM-DD') : 'None' }}</p>
+<p>Selected Time: {{ selectedTime ? selectedTime.format('HH:mm:ss') : 'None' }}</p>

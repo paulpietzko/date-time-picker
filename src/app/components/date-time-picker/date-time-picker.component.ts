@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { TimePickerComponent } from "../time-picker/time-picker.component";
-import { DatePickerComponent } from "../date-picker/date-picker.component";
+import { TimeZoneDisplayComponent } from "../time-zone-display/time-zone-display.component";
 
 @Component({
   selector: 'app-date-time-picker',
-  imports: [TimePickerComponent, DatePickerComponent],
+  imports: [TimeZoneDisplayComponent],
   templateUrl: './date-time-picker.component.html',
   styleUrl: './date-time-picker.component.scss'
 })
