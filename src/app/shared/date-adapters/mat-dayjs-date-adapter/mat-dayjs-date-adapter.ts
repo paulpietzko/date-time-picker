@@ -263,6 +263,26 @@ export class MatDayjsDateAdapter extends DateAdapter<Dayjs> {
     return (date.locale(this.locale).format(displayFormat));
   }
 
+  override getSeconds(date: Dayjs): number {
+    return date.second();
+  }
+    
+  override getMinutes(date: Dayjs): number {
+    return date.minute();
+  }
+  
+  override getHours(date: Dayjs): number {
+    return date.hour();
+  }
+
+  override setTime(date: Dayjs, hours: number, minutes: number, seconds: number): Dayjs {
+    return date.set('hour', hours).set('minute', minutes).set('second', seconds);
+  }
+
+  override addSeconds(date: Dayjs, seconds: number): Dayjs {
+    return date.add(seconds, 'second');
+  }
+
   override addCalendarYears(date: Dayjs, years: number): Dayjs {
     return date.add(years, 'year');
   }
