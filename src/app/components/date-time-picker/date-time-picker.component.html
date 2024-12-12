@@ -1,1 +1,19 @@
-<app-time-zone-display></app-time-zone-display>
+<mat-form-field>
+  <mat-label>Meeting date</mat-label>
+  <input matInput [matDatepicker]="datepicker" [(ngModel)]="value">
+  <mat-datepicker #datepicker></mat-datepicker>
+  <mat-datepicker-toggle [for]="datepicker" matSuffix></mat-datepicker-toggle>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Meeting time</mat-label>
+  <input
+    matInput
+    [matTimepicker]="timepicker"
+    [(ngModel)]="value"
+    [ngModelOptions]="{ updateOn: 'blur' }">
+  <mat-timepicker #timepicker></mat-timepicker>
+  <mat-timepicker-toggle [for]="timepicker" matSuffix></mat-timepicker-toggle>
+</mat-form-field>
+
+<p>Value: {{ value }}</p>

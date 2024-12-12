@@ -7,6 +7,4 @@ import { DateTimePickerComponent } from './components/date-time-picker/date-time
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'date-time-picker';
-}
+export class AppComponent { }
