@@ -1,6 +1,11 @@
 <mat-form-field>
   <mat-label>Meeting date</mat-label>
-  <input matInput [matDatepicker]="datepicker" [(ngModel)]="value">
+  <input
+    matInput
+    (dateChange)="setDateChanged()"
+    [matDatepicker]="datepicker"
+    [(ngModel)]="value"
+  />
   <mat-datepicker #datepicker></mat-datepicker>
   <mat-datepicker-toggle [for]="datepicker" matSuffix></mat-datepicker-toggle>
 </mat-form-field>
@@ -11,9 +16,14 @@
     matInput
     [matTimepicker]="timepicker"
     [(ngModel)]="value"
-    [ngModelOptions]="{ updateOn: 'blur' }">
+    [ngModelOptions]="{ updateOn: 'blur' }"
+    (selected)="setTimeChanged()"
+  />
   <mat-timepicker #timepicker></mat-timepicker>
   <mat-timepicker-toggle [for]="timepicker" matSuffix></mat-timepicker-toggle>
 </mat-form-field>
-
+<hr>
 <p>Value: {{ value }}</p>
+<hr>
+<pre>Date Changed: <strong>{{ dateChanged }}</strong></pre>
+<pre>Date Changed: <strong>{{ timeChanged }}</strong></pre>
