@@ -17,13 +17,14 @@
     [matTimepicker]="timepicker"
     [(ngModel)]="value"
     [ngModelOptions]="{ updateOn: 'blur' }"
-    (selected)="setTimeChanged()"
   />
   <mat-timepicker #timepicker></mat-timepicker>
   <mat-timepicker-toggle [for]="timepicker" matSuffix></mat-timepicker-toggle>
 </mat-form-field>
-<hr>
-<p>Value: {{ value }}</p>
-<hr>
-<pre>Date Changed: <strong>{{ dateChanged }}</strong></pre>
-<pre>Date Changed: <strong>{{ timeChanged }}</strong></pre>
+<div>
+  <hr />
+  <p>Value: {{ value }}</p>
+  <hr />
+  <pre>Date Changed: <strong>{{ dateChanged }}</strong></pre>
+  <pre>Date Changed: <strong>{{ timeChanged }}</strong></pre>
+</div>
